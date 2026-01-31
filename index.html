@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="EFHAYMI Rihab">
+  <title>Muses & Pages - Club de Lecture Féminin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-book-open logo-icon"></i>
+          <span>Muses & Pages</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">Qui sommes-nous</a></li>
+          <li><a href="#categories">Bibliothèque</a></li>
+          <li><a href="#spotlight">Spotlight</a></li>
+          <li><a href="#planning">Planning</a></li>
+          <li><a href="#members">Espace Membres</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Mode sombre">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Muses & Pages</h1>
+        <p>Un cercle de lectrices unies par l'amour des mots, des pages qui murmurent, et des histoires qui traversent le temps. <br>EFHAYMI Rihab</p>
+
+        <div class="hero-buttons">
+          <a href="#members" class="btn btn-primary">Rejoindre le club</a>
+          <a href="#members" class="btn btn-secondary">Ma liste</a>
+        </div>
+
+        <div class="chips">
+          <div class="chip" data-target="members">
+            <i class="fas fa-video"></i>
+            <span>Salle virtuelle</span>
+          </div>
+          <div class="chip" data-target="categories">
+            <i class="fas fa-share-alt"></i>
+            <span>Partage & avis</span>
+          </div>
+          <div class="chip" data-target="members">
+            <i class="fas fa-bookmark"></i>
+            <span>Ma liste</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Qui sommes-nous</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Notre idée</h3>
+          <p>Muses & Pages est un lieu de partage où chaque lecture devient une archive, chaque avis une trace, et chaque page une inspiration.</p>
+
+          <h3>Nos valeurs</h3>
+          <p>
+            <strong>Respect :</strong> Chaque opinion a sa place dans notre cercle.<br>
+            <strong>Bienveillance :</strong> Un espace sécurisé pour s'exprimer librement.<br>
+            <strong>Créativité :</strong> Explorer différents genres et formes d'expression.
+          </p>
+        </div>
+
+        <div class="muses-lexicon">
+          <h3>Muses</h3>
+          <div class="muses-grid" id="musesGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <h2 class="section-title">Bibliothèque</h2>
+
+      <div class="categories-filter" id="categoriesFilter">
+        <button class="category-btn active" data-category="all">Tout <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="clio">Clio <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="calliope">Calliope <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="erato">Erato <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="thalia">Thalia <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="melpomene">Melpomene <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="urania">Urania <span class="category-count">0</span></button>
+        <button class="category-btn" data-category="polyhymnia">Polyhymnia <span class="category-count">0</span></button>
+      </div>
+
+      <div class="books-grid" id="booksGrid"></div>
+    </div>
+  </section>
+
+  <!-- Spotlight -->
+  <section id="spotlight">
+    <div class="container">
+      <h2 class="section-title">Spotlight</h2>
+
+      <div class="spotlight-container">
+        <div class="spotlight-slide active">
+          <div class="spotlight-icon"><i class="fas fa-book"></i></div>
+          <h3>Livre du mois</h3>
+          <p><strong>"Les Gardiens de la mémoire"</strong> d'Émilie Bernard</p>
+          <p>Un roman historique captivant qui explore la transmission des souvenirs familiaux à travers les générations. Recommandé par Clio.</p>
+        </div>
+
+        <div class="spotlight-slide">
+          <div class="spotlight-icon"><i class="fas fa-film"></i></div>
+          <h3>Film du mois</h3>
+          <p><strong>"Les Heures Solaires"</strong> de Sophie Lefèvre</p>
+          <p>Adaptation cinématographique du roman à succès de notre club. Une plongée émouvante dans les relations familiales.</p>
+        </div>
+
+        <div class="spotlight-slide">
+          <div class="spotlight-icon"><i class="fas fa-comments"></i></div>
+          <h3>Débat de la semaine</h3>
+          <p><strong>"La place des femmes dans la littérature classique"</strong></p>
+          <p>Échange passionnant sur la représentation féminine dans les œuvres canoniques. Rejoignez la conversation !</p>
+        </div>
+
+        <div class="spotlight-slide">
+          <div class="spotlight-icon"><i class="fas fa-quote-right"></i></div>
+          <h3>Citation du mois</h3>
+          <p><em>"Les livres sont des amis qui ne nous quittent jamais, des compagnons silencieux qui éclairent nos nuits."</em></p>
+          <p>— Sarah, membre du club</p>
+        </div>
+
+        <!-- ✅ Boutons comme ton code 1 -->
+        <div class="spotlight-nav">
+          <button class="nav-btn" id="spotPrev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+          <button class="nav-btn" id="spotNext" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planning -->
+  <section id="planning">
+    <div class="container">
+      <h2 class="section-title">Planning du club</h2>
+
+      <table class="planning-table">
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Activité</th>
+            <th>Muse</th>
+            <th>Heure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-details="Discussion sur 'Les Gardiens de la mémoire' - Salle de lecture virtuelle">
+            <td>Lundi 15</td>
+            <td>Lecture collective</td>
+            <td>Clio</td>
+            <td>18h-20h</td>
+          </tr>
+          <tr data-details="Atelier d'écriture poétique - Apportez vos carnets">
+            <td>Mercredi 17</td>
+            <td>Atelier créatif</td>
+            <td>Calliope</td>
+            <td>19h-21h</td>
+          </tr>
+          <tr data-details="Club des romances - Échange autour de nos coups de cœur">
+            <td>Vendredi 19</td>
+            <td>Partage & avis</td>
+            <td>Erato</td>
+            <td>17h-19h</td>
+          </tr>
+          <tr data-details="Projection du film du mois suivie d'une discussion">
+            <td>Samedi 20</td>
+            <td>Ciné-club</td>
+            <td>Toutes</td>
+            <td>14h-17h</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+<!-- Members -->
+<section id="members">
+  <div class="container">
+    <h2 class="section-title">Espace Membres</h2>
+
+    <div class="members-container">
+      <!-- AUTH CARD -->
+      <div class="card" id="authCard">
+        <div class="auth-tabs">
+          <button class="tab active" type="button" data-tab="login">
+            <i class="fas fa-user"></i> Connexion
+          </button>
+          <button class="tab" type="button" data-tab="signup">
+            <i class="fas fa-user-plus"></i> Créer un compte
+          </button>
+        </div>
+
+        <!-- LOGIN PANEL -->
+        <div class="auth-panel active" id="panel-login">
+          <h3 class="subtitle"><i class="fas fa-right-to-bracket"></i> Se connecter</h3>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" placeholder="ex: rihab@mail.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPass">Mot de passe</label>
+              <input type="password" id="loginPass" placeholder="Mot de passe" required>
+            </div>
+
+            <button class="btn btn-primary full" type="submit">
+              <i class="fas fa-unlock"></i> Connexion
+            </button>
+
+            <p class="small muted center" style="margin-top:12px;">
+              Astuce : le quiz n’est demandé que pour créer un compte ✅
+            </p>
+          </form>
+        </div>
+
+        <!-- SIGNUP PANEL -->
+        <div class="auth-panel" id="panel-signup">
+          <h3 class="subtitle"><i class="fas fa-user-plus"></i> Créer un compte</h3>
+
+          <form id="signupForm">
+            <div class="form-group">
+              <label for="signupName">Nom</label>
+              <input type="text" id="signupName" placeholder="Ton prénom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signupEmail">Email</label>
+              <input type="email" id="signupEmail" placeholder="ex: rihab@mail.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signupPass">Mot de passe</label>
+              <div class="pass-row">
+                <input type="password" id="signupPass" placeholder="Min 4 caractères" required>
+                <button class="eye" type="button" data-eye="signupPass" aria-label="Afficher mot de passe">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ✅ QUIZ ONLY SIGNUP -->
+            <div class="quiz-signup" id="quizSignup">
+              <p class="muted" style="margin-bottom:8px;">
+                <strong>Quiz d’entrée</strong> (obligatoire) :
+                Quelle muse représente la science-fiction ?
+              </p>
+
+              <div class="quiz-options">
+                <label><input type="radio" name="signupQuiz" value="clio"> Clio</label>
+                <label><input type="radio" name="signupQuiz" value="urania" data-correct="true"> Urania</label>
+                <label><input type="radio" name="signupQuiz" value="thalia"> Thalia</label>
+              </div>
+            </div>
+
+            <button class="btn btn-primary full" type="submit">
+              <i class="fas fa-check"></i> Créer mon compte
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- MEMBER AREA (after login/signup) -->
+      <div class="card" id="memberArea" style="display:none;">
+        <div class="member-head">
+          <h3 class="subtitle"><i class="fas fa-heart"></i> Bienvenue <span id="memberName">membre</span> !</h3>
+
+          <button class="btn btn-soft" id="logoutBtn" type="button">
+            <i class="fas fa-right-from-bracket"></i> Déconnexion
+          </button>
+        </div>
+
+        <p class="muted center">Ajoute des livres et construis ta liste.</p>
+
+        <div class="member-tabs">
+          <button class="m-tab active" type="button" data-mtab="add">
+            <i class="fas fa-plus"></i> Ajouter
+          </button>
+          <button class="m-tab" type="button" data-mtab="list">
+            <i class="fas fa-bookmark"></i> Ma liste
+          </button>
+        </div>
+
+        <!-- PANEL: ADD -->
+        <div class="member-panel active" id="mp-add">
+          <form id="shareForm" class="member-form">
+            <input type="text" id="bookTitle" placeholder="Titre du livre" required>
+            <input type="text" id="bookAuthor" placeholder="Autrice / Auteur" required>
+
+            <select id="bookMuse" required>
+              <option value="" disabled selected>Choisir une muse</option>
+              <option value="clio">Clio</option>
+              <option value="calliope">Calliope</option>
+              <option value="erato">Erato</option>
+              <option value="thalia">Thalia</option>
+              <option value="melpomene">Melpomene</option>
+              <option value="urania">Urania</option>
+              <option value="polyhymnia">Polyhymnia</option>
+            </select>
+
+            <textarea id="bookReview" placeholder="Ton avis (optionnel)"></textarea>
+
+            <button type="submit" class="btn btn-primary full">
+              <i class="fas fa-plus"></i> Ajouter à la bibliothèque
+            </button>
+          </form>
+        </div>
+
+        <!-- PANEL: LIST -->
+        <div class="member-panel" id="mp-list">
+          <ul class="mylist" id="myList"></ul>
+          <p class="small muted center" id="myListEmpty">Aucun livre dans ta liste pour l’instant.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Action effectuée avec succès</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Muses & Pages</h3>
+          <p>Un cercle de lectrices unies par l'amour des mots et des histoires qui traversent le temps.
+            <br>Une page, une voix, une muse 
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>rih.efhaymi@gmail.com <br>EFHAYMI Rihab</p>
+          <p>+212 600 00 00 00</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <div style="display:flex;gap:15px;font-size:1.5rem;justify-content:center;">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-goodreads"></i>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:30px;font-size:0.9rem;">© 2026 Muses & Pages. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
